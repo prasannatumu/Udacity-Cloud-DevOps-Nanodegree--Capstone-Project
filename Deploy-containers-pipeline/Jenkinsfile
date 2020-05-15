@@ -3,10 +3,11 @@ pipeline {
 	stages {
 
 		stage('Lint HTML') {
-			steps {
-				sh 'tidy -q -e *.html'
-			}
-		}
+			    steps {
+				    sh 'tidy -q -e *.html'
+				    sh 'echo $USER'
+			    }
+		    }
 		
 		stage('Build Docker Image') {
 			steps {
